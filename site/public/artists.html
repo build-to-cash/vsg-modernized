@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artist Roster - VSG Bliss</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#574500",
+                        "primary": "#ffb4ab",
+                        "tertiary-fixed": "#dae2ff",
+                        "inverse-primary": "#9c423a",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#2c457d",
+                        "secondary-fixed": "#ffe088",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-container": "#738ac7",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#dbc0bd",
+                        "on-primary-fixed-variant": "#7d2b25",
+                        "on-background": "#e5e2e1",
+                        "surface-bright": "#393939",
+                        "secondary-container": "#af8d11",
+                        "secondary": "#e9c349",
+                        "outline-variant": "#554240",
+                        "on-tertiary-fixed": "#001947",
+                        "outline": "#a38b88",
+                        "on-secondary": "#3c2f00",
+                        "surface-tint": "#ffb4ab",
+                        "on-primary-fixed": "#410002",
+                        "tertiary-container": "#002159",
+                        "primary-container": "#4e0707",
+                        "background": "#131313",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#241a00",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary": "#122e65",
+                        "on-secondary-container": "#342800",
+                        "on-primary-container": "#d56d63",
+                        "tertiary": "#b1c5ff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#5f1411",
+                        "surface-container": "#20201f",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed-dim": "#b1c5ff",
+                        "surface-container-highest": "#353535",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-dim": "#131313"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"],
+                        "serif": ["Noto Serif", "serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-4 md:px-12 py-4 md:py-6 max-w-full mx-auto">
+<div class="text-xl md:text-2xl font-bold italic text-[#E9C349] tracking-tighter font-serif">VSG Bliss</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="index.html">Home</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="about.html">About</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="events.html">Events</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#E9C349] pb-1" href="artists.html">Artists</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+<button id="mobile-menu-btn" class="md:hidden p-2 text-[#E9C349]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+<button class="hidden md:flex items-center gap-2 px-4 md:px-6 py-2 bg-secondary text-[#3c2f00] font-bold text-sm rounded-md transition-all duration-300 hover:shadow-[0px_0px_20px_rgba(233,195,73,0.3)]">
+MEMBERSHIP
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 w-full bg-[#131313]/95 backdrop-blur-md border-t border-[#4E0707]">
+<div class="flex flex-col px-4 py-4 gap-2">
+<a class="font-['Manrope'] text-[13px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="index.html">Home</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="about.html">About</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="events.html">Events</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider text-[#E9C349] py-2" href="artists.html">Artists</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="contact.html">Contact</a>
+<button class="mt-2 px-6 py-3 bg-secondary text-[#3c2f00] font-bold text-sm rounded-md">
+MEMBERSHIP
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 px-4 md:px-12 text-center overflow-hidden min-h-[500px] md:min-h-[700px]">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="absolute inset-0 bg-gradient-to-b from-[#4E0707]/40 to-[#131313]"></div>
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="dramatic wide shot of a dimly lit jazz club stage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4poJcT_hEVwIel0W5g2aUf20pbSOOejYEwW-Cb-_JU4hrxKtcUaf2-W7mnwGukF4zYtcxGpPydIHBZDGUvi4gbvU9JTVoArBsDziskuA6sAFta_Z93HiYn0vlzoRTeSJ1nFmOsh2B3tWfsIzYYqbfPDpdYZlWjFuFo1NC6TOz4jbOi-pA1bbmpB-EPTmGoiF0nO7JjQ-CJkm6K1m4MKK1sBCA4qzYoyNzMh4o_-jSJPgIWwJ9bdnr2Ea-xs7h5NxtXcWAQj0KBtiA"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h1 class="text-4xl md:text-7xl lg:text-8xl font-serif text-[#E9C349] mb-4 md:mb-8 tracking-tight">Our Artists</h1>
+<p class="text-lg md:text-xl text-[#e5e2e1]/60 font-light max-w-2xl mx-auto leading-relaxed">
+                Experience a curated collective of soulful R&amp;B, rhythmic Hip Hop, and vibrant Afrobeats.
+            </p>
+</div>
+</header>
+<!-- Artist Roster -->
+<main class="w-full bg-surface-container-low py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Artist Card 1 -->
+<div class="group relative bg-primary-container rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="male singer performing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdfPa6b1rcLFqPQFKIC8XkXKQa4Mf1VsTikn-TVxNK7bSkFVyMwYH-w6aqFJ5L6Ryv6-Uv4uuEhmjEBnnhGdLTeQXeuXitQlx8HOVAe4kMnESU1bL5SByAVdaIXuGk2G3fjNTsLhY-7QCmFS-HxeuFS05Giw0HSOzyt_Zfw6ohKL1WANVwug-g1FBY3bSfRW4yZEimirOOV4sh02hxiwLQuWGcMIjjSHE4gfsV5w9w5QmO3MGH1GT86nJle0ANjH_tbRO2Vryd4DCc"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-primary-container via-primary-container to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-secondary opacity-80 mb-2 block">R&amp;B / Soul</span>
+<h3 class="text-2xl font-headline text-on-surface mb-4">Malik Thorne</h3>
+<button class="bg-secondary text-[#3c2f00] px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 2 -->
+<div class="group relative bg-primary-container rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="female hip hop artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhSkiCDKp0yVnsBiCTwKkP55JYFi62ldDIrLD1hjMONsqVJQR_Tv02QJt0PEetxhYZF_tOuvQMQm0FU1uWAn8itkXOW5cPzTjJJbn6N9jLnHQgijsnXZC9R2uBwmFrcMT4JgKF_7vMMtMRHnpVU87Yu_-WCiigUg3mOXI1Ll4J1fp-fw1MbPk0UWg6m6Q8EZbeKJZSdWZd-0laSjwph6FJyhfZ9iHGRMrBj4ctm1UIwpaDeOU0aRMdhAizfW-Y4rignKRzB7ktIa4T"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-primary-container via-primary-container to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-secondary opacity-80 mb-2 block">Hip Hop</span>
+<h3 class="text-2xl font-headline text-on-surface mb-4">Sasha Vane</h3>
+<button class="bg-secondary text-[#3c2f00] px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 3 -->
+<div class="group relative bg-primary-container rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="saxophone player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCeQkFZGGYNGlNk8y6g7vmBQ7eP2uRxoJraVyIyO5LDBu4BK9-che9hm2Cla2UWWdcJa9IaDO2IuzFooGuTXn9oSbgbvxIhexeLTMrgUf91CK3ZivN8p_wordGvGUqCZixfcdvvGIKmO8sysOS6zXDoXfpLXMSSYoRz53m10SxASw66B8d6rqmOQzV0ZskLW9Yua6dJTzWmpoHDGTMJiAdfyEiJpCsnQdWU_KS83ecydAyiz5SL_tyuAPCuBki2RapeBOKbt_JHVwX"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-primary-container via-primary-container to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-secondary opacity-80 mb-2 block">Afrobeats</span>
+<h3 class="text-2xl font-headline text-on-surface mb-4">Kojo Rhythm</h3>
+<button class="bg-secondary text-[#3c2f00] px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 4 -->
+<div class="group relative bg-primary-container rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="R&amp;B singer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvYfkCXGHk5z1jTvarhdGTmgkxPCTr6XvXr7NpNAtNB4OtLb0lqUELo05hHP7jsYRRwXhpfMyELmG4VuarrEr-Hx9CBYWQoMm2SCAYQ0ZqqVx6G5jtAgjYT7_3p7xzCIrBNhpl4TlwOOvxVSlSy9WKOr-X47mo2nNKfDVPRSKzMxgz1hPQaF6OlSaQkfvAYtVX2yL8uCBjHPWXh5QqnR0qO_uwIFtU2uIzqVmvktJvY_EvKqo6bwvJPNkrEO582zjR3mWVWsnR9t5M"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-primary-container via-primary-container to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-secondary opacity-80 mb-2 block">Neo-Soul</span>
+<h3 class="text-2xl font-headline text-on-surface mb-4">Emani Rose</h3>
+<button class="bg-secondary text-[#3c2f00] px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 5 -->
+<div class="group relative bg-primary-container rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="hip hop artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrgvAn1qVrulPs8338qQvQpElaPWKnDaD4GgKSjOEDtK9qH-MZb4WxOyLhwWn-wEOGUDDvDg58DMVQHfSSadRenQRli1Mt3n8vUfM3QsTWZQQINy-5IDmH_90o-kD7emYLRmjBUJd6lnp9zc_CHtO37HRQbSQAyLsD_f-RgdLTNjxwkMLa1xFrtvHtViKu6QMAmwCEIRRexZQBAo52fIf3Z6P2HRRhnuxSldTpqLtfN1WbfsZb6g1gjDSF5Nh2Kqf827BC7OxSnK7z"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-primary-container via-primary-container to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-secondary opacity-80 mb-2 block">Hip Hop</span>
+<h3 class="text-2xl font-headline text-on-surface mb-4">Ghost Writer</h3>
+<button class="bg-secondary text-[#3c2f00] px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 6 -->
+<div class="group relative bg-primary-container rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="afrobeats singer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2CRqGaD9eGcJZB4_uvKk5dcImgZYR9LnQTa3eWjd826SPKNp7v9ajKPxKia-AsWQc8icUU3wNoYYoe5kOxbg2tDq1HVZr128L4wGRfxmE2oMxcLr6O-JQl5Y8o8TXIn2Y-JBbPd6-vaAV3LM9-ZBu4L0gY1s50Np5vRqoQptmfFoadXrBsGVZEvRRGR1ibeljbVXM8CnoEh-GUOI53KWI31HJ66TNi9sDo2kI8RCmIHcoT_2Umq-rhkT9ivBK4cCrlf_FxPZYCgbt"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-primary-container via-primary-container to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-secondary opacity-80 mb-2 block">Afrobeats</span>
+<h3 class="text-2xl font-headline text-on-surface mb-4">Lumi Bass</h3>
+<button class="bg-secondary text-[#3c2f00] px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface flex flex-col md:flex-row justify-around items-center gap-8 px-10">
+<div class="text-[#E9C349] font-serif italic text-3xl font-bold">VSG Bliss</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#e5e2e1]/40 hover:text-[#E9C349] transition-all" href="index.html">Home</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#e5e2e1]/40 hover:text-[#E9C349] transition-all" href="about.html">About</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#e5e2e1]/40 hover:text-[#E9C349] transition-all" href="events.html">Events</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#E9C349] font-bold" href="artists.html">Artists</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#e5e2e1]/40 hover:text-[#E9C349] transition-all" href="contact.html">Contact</a>
+</div>
+<div class="font-['Manrope'] text-xs tracking-widest uppercase text-[#e5e2e1]/20">
+            © 2024 VSG Bliss. Modern Speakeasy Experience.
+        </div>
+</footer>
+</body></html>

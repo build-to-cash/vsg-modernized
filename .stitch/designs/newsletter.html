@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "secondary-fixed-dim": "#e9c349",
+                  "inverse-surface": "#e5e2e1",
+                  "surface": "#131313",
+                  "primary": "#ffb4ab",
+                  "tertiary": "#b1c5ff",
+                  "on-tertiary-fixed-variant": "#2c457d",
+                  "on-primary-container": "#d56d63",
+                  "on-error": "#690005",
+                  "on-background": "#e5e2e1",
+                  "surface-dim": "#131313",
+                  "outline": "#a38b88",
+                  "inverse-primary": "#9c423a",
+                  "surface-bright": "#393939",
+                  "background": "#131313",
+                  "surface-container-highest": "#353534",
+                  "on-surface": "#e5e2e1",
+                  "surface-variant": "#353534",
+                  "on-primary-fixed-variant": "#7d2b25",
+                  "surface-container-high": "#2a2a2a",
+                  "on-tertiary-fixed": "#001947",
+                  "on-surface-variant": "#dbc0bd",
+                  "secondary": "#e9c349",
+                  "on-primary-fixed": "#410002",
+                  "surface-container-lowest": "#0e0e0e",
+                  "on-tertiary": "#122e65",
+                  "tertiary-container": "#002159",
+                  "on-secondary-fixed": "#231a00",
+                  "primary-fixed": "#ffdad6",
+                  "outline-variant": "#554240",
+                  "on-secondary": "#3c2f00",
+                  "on-secondary-fixed-variant": "#574500",
+                  "on-secondary-container": "#342800",
+                  "surface-tint": "#ffb4ab",
+                  "on-tertiary-container": "#738ac7",
+                  "surface-container-low": "#1c1b1b",
+                  "surface-container": "#201f1f",
+                  "on-primary": "#5f1411",
+                  "secondary-container": "#ae8d10",
+                  "primary-container": "#4e0707",
+                  "error": "#ffb4ab",
+                  "primary-fixed-dim": "#ffb4ab",
+                  "error-container": "#93000a",
+                  "tertiary-fixed": "#dae2ff",
+                  "tertiary-fixed-dim": "#b1c5ff",
+                  "on-error-container": "#ffdad6",
+                  "inverse-on-surface": "#313030",
+                  "secondary-fixed": "#ffe087"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {},
+          "fontFamily": {
+                  "headline": ["Noto Serif"],
+                  "body": ["Manrope"],
+                  "label": ["Manrope"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #131313;
+      color: #e5e2e1;
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.6;
+    }
+    .noto-serif { font-family: 'Noto Serif', serif; }
+    .tracking-tighter-custom { letter-spacing: -0.04em; }
+    .glass-nav {
+      background-color: rgba(19, 19, 19, 0.7);
+      backdrop-filter: blur(12px);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-[0_20px_50px_rgba(78,7,7,0.15)]">
+<div class="flex justify-between items-center px-6 md:px-12 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-headline font-bold tracking-tighter-custom text-on-surface uppercase">
+        <a href="index.html">VSG Bliss</a>
+      </div>
+<nav class="hidden md:flex items-center space-x-10 noto-serif">
+<a class="text-on-surface opacity-80 hover:text-secondary transition-all duration-400" href="index.html">Home</a>
+<a class="text-on-surface opacity-80 hover:text-secondary transition-all duration-400" href="about.html">About</a>
+<a class="text-on-surface opacity-80 hover:text-secondary transition-all duration-400" href="events.html">Events</a>
+<a class="text-on-surface opacity-80 hover:text-secondary transition-all duration-400" href="artists.html">Artists</a>
+<a class="text-on-surface opacity-80 hover:text-secondary transition-all duration-400" href="contact.html">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-surface px-6 py-2 rounded-md hover:scale-105 active:scale-95 duration-400 transition-all font-medium text-sm">
+        Join the Lounge
+      </button>
+</div>
+</header>
+<main>
+<!-- Hero & Form Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center pt-32 pb-20 px-6">
+<!-- Moody Hero Image Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Cinematic speakeasy interior" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Moody dark speakeasy interior with velvet armchairs, crystal glassware, dim warm amber lighting, and subtle smoke haze in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNZTRkdRlFskjJJSnj_SBLLcxHAuiRA9yW6uuyCH82X_H5LeCSHF6J7Xrx3rls3PswrvMhXmoeyzfM5aZXJ4DvyOXkDgqDUF-w6DQEWxGP-jH0Ck5XRS6MVmdfmgjBk6oJuXXuXOudWz2IR7VB7bx4EaOSHCy0aXK3vPJQPLb-t0hoSjoReb4VhWxfvKNreRB9w6cGLBPSfV0zTbSyiDVE73LlFfj76FjgmM7eOEdWpEptrMjhS87eSFHRwO4Wdx7sqthbUUtV7-e0"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface"></div>
+</div>
+<div class="relative z-10 max-w-3xl text-center space-y-8">
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter-custom text-on-surface">
+          Stay In The Loop
+        </h1>
+<p class="text-lg md:text-xl text-on-surface/80 max-w-2xl mx-auto font-body leading-relaxed">
+          Join our inner circle for priority access to secret sessions, artist showcases, and curated nocturnal experiences.
+        </p>
+<!-- Newsletter Form -->
+<div class="mt-12 w-full max-w-lg mx-auto bg-surface-container-low p-2 rounded-lg flex flex-col md:flex-row gap-3">
+<div class="flex-1 relative">
+<input class="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-secondary/30 text-on-surface py-4 px-6 rounded-md placeholder:text-on-surface-variant/40" placeholder="Enter your email address" type="email"/>
+</div>
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-md font-bold hover:shadow-[0_0_20px_rgba(233,195,73,0.3)] transition-all duration-500 scale-100 active:scale-95">
+            Join the Inner Circle
+          </button>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant/50">Respecting the silence. No spam, ever.</p>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-32 px-6 md:px-12 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Benefit 1 -->
+<div class="bg-surface p-12 space-y-6 hover:bg-surface-container transition-colors duration-500 group">
+<div class="text-secondary group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tighter-custom text-on-surface">Early Access</h3>
+<p class="text-on-surface-variant leading-relaxed">
+              Be the first to secure tickets to exclusive events before they are announced to the public. Membership has its privileges.
+            </p>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-surface p-12 space-y-6 hover:bg-surface-container transition-colors duration-500 group">
+<div class="text-secondary group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">palette</span>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tighter-custom text-on-surface">Artist Spotlights</h3>
+<p class="text-on-surface-variant leading-relaxed">
+              Deep dives into the visionaries of our collective. Exclusive interviews, studio tours, and early previews of upcoming works.
+            </p>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface p-12 space-y-6 hover:bg-surface-container transition-colors duration-500 group">
+<div class="text-secondary group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">audiotrack</span>
+</div>
+<h3 class="font-headline text-2xl font-bold tracking-tighter-custom text-on-surface">Curated Playlists</h3>
+<p class="text-on-surface-variant leading-relaxed">
+              Soundscapes for the discerning listener. Monthly collections curated by our resident artists to set the mood of your nocturne.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Closing Statement -->
+<section class="py-40 px-6 text-center bg-surface relative overflow-hidden">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary-container/20 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-6">
+<span class="text-secondary font-bold tracking-widest uppercase text-xs">A Selective Experience</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tighter-custom">The digital speakeasy awaits.</h2>
+<div class="h-[1px] w-12 bg-secondary mx-auto mt-8 shadow-[0_0_8px_#E9C349]"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-24 pb-12 bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-end px-6 md:px-12 gap-8 max-w-screen-2xl mx-auto">
+<div class="space-y-4 text-left w-full md:w-auto">
+<div class="font-headline italic text-secondary text-2xl">VSG Bliss</div>
+<p class="font-body text-sm tracking-wide leading-relaxed text-on-surface/40 max-w-xs">
+          © 2024 VSG Bliss. The digital speakeasy. Curating nocturnal experiences for the refined soul.
+        </p>
+</div>
+<div class="flex flex-wrap gap-8 justify-end w-full md:w-auto font-body text-sm">
+<a class="text-on-surface/40 hover:text-on-surface transition-colors duration-500" href="#">Privacy</a>
+<a class="text-on-surface/40 hover:text-on-surface transition-colors duration-500" href="#">Terms</a>
+<a class="text-on-surface/40 hover:text-on-surface transition-colors duration-500" href="#">Membership</a>
+<a class="text-on-surface/40 hover:text-on-surface transition-colors duration-500" href="#">Archives</a>
+</div>
+<div class="flex gap-6 items-center">
+<a class="text-on-surface/40 hover:text-secondary transition-colors duration-500" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="text-on-surface/40 hover:text-secondary transition-colors duration-500" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+<a class="text-on-surface/40 hover:text-secondary transition-colors duration-500" href="#">
+<span class="material-symbols-outlined text-xl">music_note</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

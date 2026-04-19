@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artist Roster - VSG Bliss</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;600&amp;family=Public+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        'charcoal-black': '#131313',
+                        'burgundy': '#4E0707',
+                        'gold-accent': '#E9C349',
+                        'stone-950': '#0c0a09',
+                        'amber-900': '#78350f',
+                        'amber-500': '#f59e0b'
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"],
+                        "serif": ["Noto Serif", "serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #ffffff;
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<!-- TopNavBar from Shared Components JSON -->
+<nav class="fixed top-0 w-full z-50 bg-stone-950/90 dark:bg-stone-950/95 border-b border-amber-900/30 shadow-2xl flex justify-between items-center px-6 py-4 max-w-full duration-300 ease-in-out">
+<div class="text-2xl font-serif italic font-bold text-red-800 dark:text-red-700">VSG Bliss</div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center space-x-8 font-serif tracking-wide text-sm uppercase">
+<a class="text-stone-400 dark:text-stone-500 hover:text-amber-200 transition-colors" href="#">Home</a>
+<a class="text-stone-400 dark:text-stone-500 hover:text-amber-200 transition-colors" href="#">About</a>
+<a class="text-stone-400 dark:text-stone-500 hover:text-amber-200 transition-colors" href="#">Events</a><a class="text-amber-400 dark:text-amber-300 border-b-2 border-amber-500 pb-1" href="#">Artists</a>
+<a class="text-stone-400 dark:text-stone-500 hover:text-amber-200 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-amber-500 dark:text-amber-400 p-2 hover:bg-red-900/10 dark:hover:bg-red-900/20 rounded-full transition-all">
+                person
+            </button>
+<button class="md:hidden material-symbols-outlined text-amber-500">menu</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 px-6 md:px-12 text-center overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="absolute inset-0 bg-gradient-to-b from-burgundy/40 to-charcoal-black"></div>
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="dramatic wide shot of a dimly lit jazz club stage with golden spotlights and silhouettes of musical instruments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4poJcT_hEVwIel0W5g2aUf20pbSOOejYEwW-Cb-_JU4hrxKtcUaf2-W7mnwGukF4zYtcxGpPydIHBZDGUvi4gbvU9JTVoArBsDziskuA6sAFta_Z93HiYn0vlzoRTeSJ1nFmOsh2B3tWfsIzYYqbfPDpdYZlWjFuFo1NC6TOz4jbOi-pA1bbmpB-EPTmGoiF0nO7JjQ-CJkm6K1m4MKK1sBCA4qzYoyNzMh4o_-jSJPgIWwJ9bdnr2Ea-xs7h5NxtXcWAQj0KBtiA"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h1 class="text-5xl md:text-7xl font-headline text-gold-accent mb-6 tracking-tight">Our Artists</h1>
+<p class="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto leading-relaxed">
+                Experience a curated collective of soulful R&amp;B, rhythmic Hip Hop, and vibrant Afrobeats. The heartbeat of the VSG Bliss experience.
+            </p>
+</div>
+<!-- Artist Roster Grid -->
+<main class="max-w-7xl mx-auto px-6 py-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Artist Card 1 -->
+<div class="group relative bg-burgundy rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="confident African American male singer performing with vintage microphone in a moody red lit studio session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdfPa6b1rcLFqPQFKIC8XkXKQa4Mf1VsTikn-TVxNK7bSkFVyMwYH-w6aqFJ5L6Ryv6-Uv4uuEhmjEBnnhGdLTeQXeuXitQlx8HOVAe4kMnESU1bL5SByAVdaIXuGk2G3fjNTsLhY-7QCmFS-HxeuFS05Giw0HSOzyt_Zfw6ohKL1WANVwug-g1FBY3bSfRW4yZEimirOOV4sh02hxiwLQuWGcMIjjSHE4gfsV5w9w5QmO3MGH1GT86nJle0ANjH_tbRO2Vryd4DCc"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-burgundy via-burgundy to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-gold-accent opacity-80 mb-2 block">R&amp;B / Soul</span>
+<h3 class="text-2xl font-headline text-white mb-4">Malik Thorne</h3>
+<button class="bg-gold-accent text-burgundy px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 2 -->
+<div class="group relative bg-burgundy rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="female hip hop artist with stylish braids and gold jewelry posing in front of a textured black wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhSkiCDKp0yVnsBiCTwKkP55JYFi62ldDIrLD1hjMONsqVJQR_Tv02QJt0PEetxhYZF_tOuvQMQm0FU1uWAn8itkXOW5cPzTjJJbn6N9jLnHQgijsnXZC9R2uBwmFrcMT4JgKF_7vMMtMRHnpVU87Yu_-WCiigUg3mOXI1Ll4J1fp-fw1MbPk0UWg6m6Q8EZbeKJZSdWZd-0laSjwph6FJyhfZ9iHGRMrBj4ctm1UIwpaDeOU0aRMdhAizfW-Y4rignKRzB7ktIa4T"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-burgundy via-burgundy to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-gold-accent opacity-80 mb-2 block">Hip Hop</span>
+<h3 class="text-2xl font-headline text-white mb-4">Sasha Vane</h3>
+<button class="bg-gold-accent text-burgundy px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 3 -->
+<div class="group relative bg-burgundy rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dynamic close up of a musician playing a saxophone in a dimly lit speakeasy atmospheric setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCeQkFZGGYNGlNk8y6g7vmBQ7eP2uRxoJraVyIyO5LDBu4BK9-che9hm2Cla2UWWdcJa9IaDO2IuzFooGuTXn9oSbgbvxIhexeLTMrgUf91CK3ZivN8p_wordGvGUqCZixfcdvvGIKmO8sysOS6zXDoXfpLXMSSYoRz53m10SxASw66B8d6rqmOQzV0ZskLW9Yua6dJTzWmpoHDGTMJiAdfyEiJpCsnQdWU_KS83ecydAyiz5SL_tyuAPCuBki2RapeBOKbt_JHVwX"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-burgundy via-burgundy to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-gold-accent opacity-80 mb-2 block">Afrobeats</span>
+<h3 class="text-2xl font-headline text-white mb-4">Kojo Rhythm</h3>
+<button class="bg-gold-accent text-burgundy px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 4 -->
+<div class="group relative bg-burgundy rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="portrait of a young R&amp;B singer wearing a silk shirt sitting on a velvet chair in a luxury lounge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvYfkCXGHk5z1jTvarhdGTmgkxPCTr6XvXr7NpNAtNB4OtLb0lqUELo05hHP7jsYRRwXhpfMyELmG4VuarrEr-Hx9CBYWQoMm2SCAYQ0ZqqVx6G5jtAgjYT7_3p7xzCIrBNhpl4TlwOOvxVSlSy9WKOr-X47mo2nNKfDVPRSKzMxgz1hPQaF6OlSaQkfvAYtVX2yL8uCBjHPWXh5QqnR0qO_uwIFtU2uIzqVmvktJvY_EvKqo6bwvJPNkrEO582zjR3mWVWsnR9t5M"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-burgundy via-burgundy to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-gold-accent opacity-80 mb-2 block">Neo-Soul</span>
+<h3 class="text-2xl font-headline text-white mb-4">Emani Rose</h3>
+<button class="bg-gold-accent text-burgundy px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 5 -->
+<div class="group relative bg-burgundy rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="urban hip hop artist performing on a dark street with cinematic neon city lights reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrgvAn1qVrulPs8338qQvQpElaPWKnDaD4GgKSjOEDtK9qH-MZb4WxOyLhwWn-wEOGUDDvDg58DMVQHfSSadRenQRli1Mt3n8vUfM3QsTWZQQINy-5IDmH_90o-kD7emYLRmjBUJd6lnp9zc_CHtO37HRQbSQAyLsD_f-RgdLTNjxwkMLa1xFrtvHtViKu6QMAmwCEIRRexZQBAo52fIf3Z6P2HRRhnuxSldTpqLtfN1WbfsZb6g1gjDSF5Nh2Kqf827BC7OxSnK7z"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-burgundy via-burgundy to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-gold-accent opacity-80 mb-2 block">Hip Hop</span>
+<h3 class="text-2xl font-headline text-white mb-4">Ghost Writer</h3>
+<button class="bg-gold-accent text-burgundy px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+<!-- Artist Card 6 -->
+<div class="group relative bg-burgundy rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant energy of an afrobeats singer dancing on stage with colorful ethnic patterns and warm light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2CRqGaD9eGcJZB4_uvKk5dcImgZYR9LnQTa3eWjd826SPKNp7v9ajKPxKia-AsWQc8icUU3wNoYYoe5kOxbg2tDq1HVZr128L4wGRfxmE2oMxcLr6O-JQl5Y8o8TXIn2Y-JBbPd6-vaAV3LM9-ZBu4L0gY1s50Np5vRqoQptmfFoadXrBsGVZEvRRGR1ibeljbVXM8CnoEh-GUOI53KWI31HJ66TNi9sDo2kI8RCmIHcoT_2Umq-rhkT9ivBK4cCrlf_FxPZYCgbt"/>
+</div>
+<div class="p-8 bg-gradient-to-t from-burgundy via-burgundy to-transparent">
+<span class="text-xs font-label uppercase tracking-widest text-gold-accent opacity-80 mb-2 block">Afrobeats</span>
+<h3 class="text-2xl font-headline text-white mb-4">Lumi Bass</h3>
+<button class="bg-gold-accent text-burgundy px-6 py-2 rounded-full font-label text-xs font-bold uppercase transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">View Profile</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer from Shared Components JSON -->
+<footer class="w-full py-12 bg-stone-950 dark:bg-black border-t border-amber-900/20 flex flex-col md:flex-row justify-around items-center gap-8 px-10">
+<div class="text-lg font-bold text-amber-500">VSG Bliss</div>
+<div class="flex gap-8">
+<a class="font-serif text-xs tracking-widest uppercase text-stone-500 hover:text-amber-400 transition-all" href="#">Instagram</a>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-500 hover:text-amber-400 transition-all" href="#">Facebook</a>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-500 hover:text-amber-400 transition-all" href="#">Spotify</a>
+</div>
+<div class="font-serif text-xs tracking-widest uppercase text-stone-500">
+            © 2024 VSG Bliss. Modern Speakeasy Experience.
+        </div>
+</footer>
+</header>
+</body></html>

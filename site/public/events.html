@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Events | VSG Bliss - The Curated Lounge Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#2a2a2a",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#574500",
+                    "primary": "#ffb4ab",
+                    "tertiary-fixed": "#dae2ff",
+                    "inverse-primary": "#9c423a",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1c1b1b",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#2c457d",
+                    "secondary-fixed": "#ffe088",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-container": "#738ac7",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#dbc0bd",
+                    "on-primary-fixed-variant": "#7d2b25",
+                    "on-background": "#e5e2e1",
+                    "surface-bright": "#393939",
+                    "secondary-container": "#af8d11",
+                    "secondary": "#e9c349",
+                    "outline-variant": "#554240",
+                    "on-tertiary-fixed": "#001947",
+                    "outline": "#a38b88",
+                    "on-secondary": "#3c2f00",
+                    "surface-tint": "#ffb4ab",
+                    "on-primary-fixed": "#410002",
+                    "tertiary-container": "#002159",
+                    "primary-container": "#4e0707",
+                    "background": "#131313",
+                    "surface-variant": "#353535",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-fixed": "#ffdad6",
+                    "on-tertiary": "#122e65",
+                    "on-secondary-container": "#342800",
+                    "on-primary-container": "#d56d63",
+                    "tertiary": "#b1c5ff",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#5f1411",
+                    "surface-container": "#20201f",
+                    "surface": "#131313",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary-fixed-dim": "#b1c5ff",
+                    "surface-container-highest": "#353535",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "surface-dim": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary/30 overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-md shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-4 md:px-12 py-4 md:py-6 mx-auto w-full">
+<a class="text-xl md:text-2xl font-bold italic text-[#E9C349] tracking-tighter font-serif" href="index.html">VSG Bliss</a>
+<button id="mobile-menu-btn" class="md:hidden p-2 text-[#E9C349]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden');document.getElementById('desktop-links').classList.toggle('hidden')">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+<div id="desktop-links" class="hidden md:flex items-center gap-10">
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="index.html">Home</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="about.html">About</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#E9C349] pb-1" href="events.html">Events</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="artists.html">Artists</a>
+<a class="font-['Manrope'] text-[13px] tracking-wider transition-all duration-300 text-[#e5e2e1] opacity-70 hover:text-[#E9C349] hover:bg-[#4E0707]/10" href="contact.html">Contact Us</a></div>
+<button class="hidden md:flex items-center gap-2 px-4 md:px-6 py-2 bg-secondary text-[#3c2f00] font-bold text-sm rounded-md transition-all duration-300 hover:shadow-[0px_0px_20px_rgba(233,195,73,0.3)] active:scale-95">
+MEMBERSHIP
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden w-full bg-[#131313] border-t border-[#4E0707]">
+<div class="flex flex-col px-4 py-4 gap-1">
+<a class="font-['Manrope'] text-[14px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="index.html">Home</a>
+<a class="font-['Manrope'] text-[14px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="about.html">About</a>
+<a class="font-['Manrope'] text-[14px] tracking-wider text-[#E9C349] py-2" href="events.html">Events</a>
+<a class="font-['Manrope'] text-[14px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="artists.html">Artists</a>
+<a class="font-['Manrope'] text-[14px] tracking-wider text-[#e5e2e1] py-2 hover:text-[#E9C349]" href="contact.html">Contact Us</a>
+<button class="mt-2 px-6 py-3 bg-secondary text-[#3c2f00] font-bold text-sm rounded-md">
+MEMBERSHIP
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 bg-surface">
+<!-- Hero Section -->
+<section class="relative min-h-[500px] md:min-h-[700px] flex items-center px-4 md:px-12 overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="atmospheric shot of a dimly lit luxury jazz club" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3hvc61WZSAp6EBmEmX3xAp6UqhHZDay-qD-XVdon2DxLKIg81MDhugQqi4fdqrbPDC9RIiOYBQ3jHmurgrtzcpKWVCa2lXoRqoHjgIBep4d4oxVhreC2a96JdeGhr7qWXJQzFlk8-CtPCmCDCvz-TL7CLnYtBOCsekdL2nefYWWjQUicKwb2MoZcNYlM2oHuPvAlZqzGj-w-NbFVCZMNyYcrSUAAE43GZr7bpmao_ucS-vLFHI6muzCni15FKuHgb3SzI6EwhLBI"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="text-secondary font-label text-sm tracking-[0.3em] uppercase mb-4 block">The Curated Calendar</span>
+<h1 class="text-4xl md:text-7xl lg:text-8xl font-serif font-bold italic tracking-tighter text-on-surface leading-none mb-4 md:mb-8">
+                Moments of <span class="text-secondary">Prestige</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface/60 max-w-2xl leading-relaxed font-light">
+                From the rhythmic pulse of Afrobeat nights to the intimacy of curated food fairs, experience the intersection of high culture and lifestyle.
+            </p>
+</div>
+</section>
+<!-- Featured Spotlight -->
+<section class="px-4 md:px-12 py-24 bg-surface-container-low">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-xl blur-2xl group-hover:bg-primary-container/30 transition-all duration-700"></div>
+<img class="relative rounded-xl w-full h-[500px] object-cover shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]" data-alt="talented Black music artist performing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtUZsXjPrMt6pWQGnY2FZLJzhiRXm34WiudVqmLMfFasW542meP9yd3zdvenmhmy3OYV6Lu-bmjLdsUykKq3wt4qFZUyNurYdjLkxTZ7lFPotC8UjrLVPISkdBOZKt16nnNIvg71b2z8egTcBSzndjeRRla_DGEOE4l3mZkbSPbTXYR8NL7E0FR1IEQWvfoxih43aRNzL1BbJjnJAlyvjd3cWXCykORnLNiuTvG4hc3ClYitH_Xi5orEycnIar2GY3XKskWuGaEXsw"/>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-6">
+<span class="inline-flex items-center gap-2 text-secondary font-label text-xs tracking-widest uppercase">
+<span class="w-12 h-px bg-secondary"></span> Spotlight Event
+                </span>
+<h2 class="text-5xl font-serif font-bold text-on-surface leading-tight">Vibe &amp; Vine: <br/>Afrobeat Collective</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg italic font-light">
+                    A sensory journey through West African rhythms paired with curated wine selections.
+                </p>
+<div class="flex flex-col gap-4 mt-4">
+<div class="flex items-center gap-4 text-on-surface/80">
+<span class="material-symbols-outlined text-secondary">calendar_today</span>
+<span class="font-label tracking-wide uppercase text-sm">October 24, 2024 • 9:00 PM</span>
+</div>
+</div>
+<div class="pt-6 flex gap-6">
+<button class="bg-secondary text-[#3c2f00] px-8 py-4 rounded-md font-bold tracking-widest uppercase text-xs hover:shadow-[0px_0px_20px_rgba(233,195,73,0.4)] transition-all">
+                        Secure Access
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Events Grid -->
+<section class="px-12 py-32 space-y-24 bg-surface">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-12">
+<div class="max-w-2xl">
+<h3 class="text-4xl font-serif italic mb-4">Upcoming Engagements</h3>
+<p class="text-on-surface-variant font-body">Browse our curated selection of concerts, lifestyle fairs, and exclusive social gatherings.</p>
+</div>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dj hand on turntable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwI7THm58NLW4ODdNpHPxtMEOYF5IvgMGGMHzH0-Un9go_TxJ9F7N5-rxxdOku7ldyhDu2jLhzWks0K6MPsJOYXJF_QQIZ22jkM5-3bl6TTM65DnwdTjXTaqGcC9kzxppbRMejMMB-8JW2oy4vSNf-7ZxA9H1oFkneqfV9Th04Dtr6zr6Hk9Vzq6NEaEBcV13XHf-aqPfy-2Y3kasHrCDtjM9NjSCb4LHYlpH-GYUWuDb14UFLzsaKMjn-xZO8ezt70D6oh9NHQs54"/>
+<div class="absolute top-4 left-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-sm">
+<span class="text-secondary text-[10px] font-bold uppercase tracking-widest">Hip Hop</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<div>
+<h4 class="text-2xl font-serif font-bold mb-3 group-hover:text-secondary transition-colors">Late Night Lyrics</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">An intimate R&amp;B and Hip Hop showcase featuring underground legends.</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-bold">$45</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-primary-container rounded-xl overflow-hidden shadow-xl md:col-span-2 flex flex-col md:flex-row">
+<div class="relative w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="barbecue grilling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfXT3xp6Ve9sAMPs9026q_RLvxsJ6MKamCvoTrUABL6Vg7xCDDyhMcqQ61O8LAPbf_kp6Zd3vGYgilYKjeVFfAAWoLx1sd-6bj_H8YnYuFwMJJgFQ6PrPkiUaHir9hy7LIdyA1FVjT83GfIH0Sid4WXPVH8hvcV1ClwnfzDK3doyLNNS9XluUaxybJysvCcewWyyL_qM-mjXX2XEUN_cALCs2RxQ7gFSA7nLgLQkdUkplg57R5jEQe9CEm-pDn187ok1AUYVUEVeFM"/>
+</div>
+<div class="p-8 md:p-12 w-full md:w-1/2 flex flex-col justify-center">
+<span class="text-secondary font-label text-[10px] tracking-[0.2em] uppercase mb-4 block">Lifestyle Series</span>
+<h4 class="text-3xl md:text-4xl font-serif font-bold mb-4 leading-tight">Bliss Barbecue &amp; Soul Food Fair</h4>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vintage microphone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTk9jNkyCRquTNpedilbEfD0j55o5C-I4jarMinq9FaAm-OLkYMLJW7j2aMUuw4lR4EWRWnKdb3MXayA9s6bZMVXPmuoeu7kE62AMJM-7rgf-GqVHjO053wSqA74gN6EXgYFnyIz0ByMSL8H0CtA4gxU-sWrt18uVNNYRENjimtej49_W79V6Zrz-CGOP3SPkvwJUtdgo_uysC-s5DP7R8e9gS2W9e8lulGFrDD5UWFATlySbx56HxTmTSn2LxSt8rni73ty1QOt3Y"/>
+<div class="absolute top-4 left-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-sm">
+<span class="text-secondary text-[10px] font-bold uppercase tracking-widest">R&amp;B</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<h4 class="text-2xl font-serif font-bold mb-3 group-hover:text-secondary transition-colors">Silk &amp; Satin Echoes</h4>
+<span class="text-secondary font-bold">$30</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-surface-container-low rounded-xl overflow-hidden shadow-xl flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="crowd at music event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_I7i2YxgkmPgEQFeOjakihgIb6bivVXpk29DYKufW0aqPat6SRsdwYushgf0zwVGvq0Q9UcI7H6Tqlr94N-aVYJeVZjKuyrocNhAvbPWDfjbHXPjVaLToC8XAwzYYn8ZvJcLtVozOUbswww5bvvIjUPPRoqaivZrFjNRtQDMJFybFFgN7NEl2o12uUmE7JxpKF6TAzYbqK43S0AItD1RJMx4f-OmCYx_mRR_u_6ywI4EqwU0yvqvDS8S9TWqg9dc0xxzgRhBU8dkV"/>
+<div class="absolute top-4 left-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-sm">
+<span class="text-secondary text-[10px] font-bold uppercase tracking-widest">Pop</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<h4 class="text-2xl font-serif font-bold mb-3 group-hover:text-secondary transition-colors">Neo-Pop Sessions</h4>
+<span class="text-secondary font-bold">$55</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="px-12 py-32 bg-primary-container relative overflow-hidden">
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-5xl font-serif font-bold italic mb-6">Never Miss a <span class="text-secondary">Moment</span></h2>
+<p class="text-on-primary-container text-lg mb-10 max-w-xl mx-auto opacity-80">Join our inner circle for priority bookings and secret event announcements.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<input class="w-full md:w-96 bg-surface-container-high/50 border-none rounded-md px-6 py-4 text-sm font-label tracking-widest focus:ring-1 focus:ring-secondary text-on-surface placeholder:text-on-surface/30" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="w-full md:w-auto bg-secondary text-[#3c2f00] px-10 py-4 rounded-md font-bold text-xs uppercase tracking-[0.2em] hover:scale-105 transition-transform duration-300">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface flex flex-col items-center gap-8 px-8">
+<div class="text-[#E9C349] font-serif italic text-3xl">VSG Bliss</div>
+<div class="flex gap-12 font-['Manrope'] text-sm tracking-widest uppercase">
+<a class="text-[#e5e2e1]/40 hover:text-[#E9C349] transition-colors duration-500" href="index.html">Home</a>
+<a class="text-[#e5e2e1]/40 hover:text-[#E9C349] transition-colors duration-500" href="about.html">About</a>
+<a class="text-[#E9C349] font-bold" href="events.html">Events</a>
+<a class="text-[#e5e2e1]/40 hover:text-[#E9C349] transition-colors duration-500" href="artists.html">Artists</a>
+<a class="text-[#e5e2e1]/40 hover:text-[#E9C349] transition-colors duration-500" href="contact.html">Contact Us</a>
+</div>
+<div class="text-[#e5e2e1]/40 font-['Manrope'] text-[10px] tracking-widest uppercase mt-4">
+        © 2024 VSG Bliss. The Curated Lounge Experience.
+    </div>
+</footer>
+</body></html>

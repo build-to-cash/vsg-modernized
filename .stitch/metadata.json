@@ -1,0 +1,77 @@
+{
+  "name": "projects/14081161961353062505",
+  "projectId": "14081161961353062505",
+  "title": "vsg",
+  "visibility": "PRIVATE",
+  "createTime": "2026-04-19T00:07:57.239499Z",
+  "updateTime": "2026-04-19T04:06:04.715321Z",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "DARK",
+    "font": "NOTO_SERIF",
+    "roundness": "ROUND_FOUR",
+    "customColor": "#4E0707",
+    "headlineFont": "NOTO_SERIF",
+    "bodyFont": "MANROPE",
+    "labelFont": "MANROPE",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#4E0707",
+    "overrideSecondaryColor": "#D4AF37",
+    "overrideNeutralColor": "#1A1A1A"
+  },
+  "screens": {
+    "home": {
+      "id": "82c11ce708e64156b9454e6de73735fa",
+      "sourceScreen": "projects/14081161961353062505/screens/82c11ce708e64156b9454e6de73735fa",
+      "x": 8845,
+      "y": 893,
+      "width": 2560,
+      "height": 7456
+    },
+    "about": {
+      "id": "b79f92a21b034a8ab5e48f33a0de59c5",
+      "sourceScreen": "projects/14081161961353062505/screens/b79f92a21b034a8ab5e48f33a0de59c5",
+      "x": 34381,
+      "y": 893,
+      "width": 2560,
+      "height": 6928
+    },
+    "events": {
+      "id": "a8bb037badec49e095852675820b7ab6",
+      "sourceScreen": "projects/14081161961353062505/screens/a8bb037badec49e095852675820b7ab6",
+      "x": 39770,
+      "y": 872,
+      "width": 2560,
+      "height": 7568
+    },
+    "artists": {
+      "id": "47f1b81abefc43a9868423f942d51a6a",
+      "sourceScreen": "projects/14081161961353062505/screens/47f1b81abefc43a9868423f942d51a6a",
+      "x": 14221,
+      "y": 883,
+      "width": 2560,
+      "height": 3812
+    },
+    "contact": {
+      "id": "889f91c4a4a7476791b3f10f8e506ad3",
+      "sourceScreen": "projects/14081161961353062505/screens/889f91c4a4a7476791b3f10f8e506ad3",
+      "x": 12877,
+      "y": 927,
+      "width": 2560,
+      "height": 3994
+    },
+    "newsletter": {
+      "id": "a22f41dd53e04082885916550b276b6c",
+      "sourceScreen": "projects/14081161961353062505/screens/a22f41dd53e04082885916550b276b6c",
+      "x": 0,
+      "y": 0,
+      "width": 2560,
+      "height": 4404
+    }
+  },
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}
